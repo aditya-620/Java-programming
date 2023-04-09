@@ -4,7 +4,7 @@ public class bubble_short {
         for(int i=0; i<arr.length-1; i++){
             boolean swapped = false;
             for(int j=0; j<arr.length-1-i ; j++){
-                if(arr[j]>arr[j+1]){
+                if(arr[j] > arr[j+1]){       //(arr[j] < arr[j+1])  for decending order
                     //swap
                     int temp = arr[j];
                     arr[j] = arr[j+1];
@@ -12,7 +12,7 @@ public class bubble_short {
                     swapped = true;
                 }
             }
-            if (swapped =  false){
+            if (swapped =  false){         //if our array is already in shorted 
                 break;
             }
         }
@@ -30,6 +30,8 @@ public class bubble_short {
         printarr(arr);
     }
 }
+
+//NOTE: Time Complexity = O(N^2) 
 
 //If you like my code do give stars:-)
 //Keep coding!!

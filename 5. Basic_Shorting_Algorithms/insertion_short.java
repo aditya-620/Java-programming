@@ -5,7 +5,7 @@ public class insertion_short {
             int curr = arr[i];
             int prev = i-1;
             //finding out the correct position  to insert
-            while(prev>=0 && arr[prev] > curr){
+            while(prev>=0 && arr[prev] > curr){        //arr[prev] < curr {for decending order}
                 arr[prev+1] = arr[prev];
                 prev--;
             }
@@ -26,6 +26,8 @@ public class insertion_short {
         printarr(arr);
     }
 }
+
+//NOTE: Time Complexity = O(N^2)
 
 //If you like my code do give stars:-)
 //Keep coding!!
