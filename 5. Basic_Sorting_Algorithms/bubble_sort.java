@@ -1,5 +1,5 @@
-//PROGRAM FOR BASIC BUBBLE SHORT
-public class bubble_short {
+//PROGRAM FOR BASIC BUBBLE SORT
+public class bubble_sort {
     public static void bubbleSort(int arr[]){
         for(int i=0; i<arr.length-1; i++){
             boolean swapped = false;
@@ -12,12 +12,12 @@ public class bubble_short {
                     swapped = true;
                 }
             }
-            if (swapped =  false){         //if our array is already in shorted 
+            if (swapped =  false){         //if our array is already in sorted 
                 break;
             }
         }
     }
-    //loop to print the shorted array
+    //loop to print the sorted array
     public static void printarr(int arr[]){
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");

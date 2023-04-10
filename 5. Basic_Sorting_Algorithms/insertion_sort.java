@@ -1,6 +1,6 @@
 //BASIC PROGRAM FOR INSERTION SHORT
-public class insertion_short {
-    public static void insertionShort(int arr[]){
+public class insertion_sort {
+    public static void insertionSort(int arr[]){
         for(int i=1; i<arr.length; i++){
             int curr = arr[i];
             int prev = i-1;
@@ -22,7 +22,7 @@ public class insertion_short {
     }
     public static void main(String args[]){
         int arr[] = {5,4,1,3,2};
-        insertionShort(arr);
+        insertionSort(arr);
         printarr(arr);
     }
 }

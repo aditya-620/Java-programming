@@ -1,11 +1,11 @@
-//INBULIT SHORTING IN JAVA
+//INBULIT SORTING IN JAVA
 
 import java.util.*;  
 /***
- import java.util.Arrays;      (for ascending order shorting)
- import java.util.Collections;   (for decending order shorting)
+ import java.util.Arrays;      (for ascending order sorting)
+ import java.util.Collections;   (for decending order sorting)
  */
-public class inbuilt_short {
+public class inbuilt_sort {
     public static void printarr(int arr[]){
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");

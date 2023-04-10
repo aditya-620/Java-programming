@@ -1,6 +1,6 @@
 //BASIC PROGRAM FOR SELECTION SHORT
-public class selection_short {
-    public static void sectionShort(int arr[]){
+public class selection_sort {
+    public static void sectionSort(int arr[]){
         for(int i=0; i<arr.length-1; i++){
             int minPos = i;     //assuming that our current position has minimum value
             for(int j=i+1; j<arr.length; j++){
@@ -22,7 +22,7 @@ public class selection_short {
     }
     public static void main(String args[]){
         int arr[] = {5,4,1,3,2};
-        sectionShort(arr);
+        sectionSort(arr);
         printarr(arr);
     }
 }
