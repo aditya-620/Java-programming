@@ -1,9 +1,9 @@
+// Java program to demonstrate How Diamond Problem
+// Is Handled in case of Default Methods
 public class diamond_problem {
-    public static void main(String args[])
-	{
+    public static void main(String args[]){
 
 		// Creating object of this class
-		// in main() method
 		TestClass d = new TestClass();
 
 		// Now calling the function defined in interface 1
@@ -11,17 +11,12 @@ public class diamond_problem {
 		d.show();
 	}
 }
-// Java program to demonstrate How Diamond Problem
-// Is Handled in case of Default Methods
 
 // Interface 1
 interface GPI {
 
 	// Default method
-	default void show()
-	{
-
-		// Print statement
+	default void show(){
 		System.out.println("Default GPI");
 	}
 }
@@ -36,11 +31,11 @@ interface PI1 extends GPI {
 interface PI2 extends GPI {
 }
 
-// Main class
 // Implementation class code
 class TestClass implements PI1, PI2 {
 
-	// Main driver method
-	
 }
 
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
