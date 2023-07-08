@@ -1,11 +1,14 @@
+//printing numbers in increasing and decreasing order
 public class recursionBasics {
     public static void printDec(int n){
+        //base case
         if(n == 1){
             System.out.println(n);
             return;
         }
+
         System.out.print(n +" ");
-        printDec(n-1);
+        printDec(n-1);   //recursive call
     }
     public static void printInc(int n){
         if(n == 1){
@@ -23,3 +26,7 @@ public class recursionBasics {
         printInc(n);
     }
 }
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
