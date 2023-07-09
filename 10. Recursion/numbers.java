@@ -18,9 +18,18 @@ public class numbers {
         num = n + natural(n-1);    
         return num;
     }
+    //calculate nth term in fibonacci
+    public static int fib(int n){
+        if(n == 1 || n == 0){
+            return n;
+        }
+        int fn = fib(n-1) + fib(n-2);
+        return fn;
+    }
     public static void main(String args[]){
         System.out.println("factorial is: " +factorial(5));
         System.out.println("sum of natural number is: " +natural(5));
+        System.out.println("nh term in fibonacci is: " +fib(6));
 
     }
 }
