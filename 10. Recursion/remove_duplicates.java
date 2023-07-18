@@ -1,3 +1,4 @@
+//program to remove duplicates in a string
 public class remove_duplicates {
     public static void removeDuplicates(String str, int idx, StringBuilder newstr, boolean map[]){
         //base case
@@ -19,5 +20,8 @@ public class remove_duplicates {
         String str = "adityarastogi";
         removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
     }
-    
 }
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-) 
