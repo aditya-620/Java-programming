@@ -1,3 +1,4 @@
+//print all the binary string of size N without consecutive ones.
 public class binary_string_problem {
     public static void printBinaryString(int n, int lastPlace, String str){
         //base case
@@ -20,3 +21,7 @@ public class binary_string_problem {
         printBinaryString(3, 0, "");
     }
 }
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
