@@ -1,3 +1,4 @@
+//program to perform quick sort
 public class quick_sort {
     public static void quickSort(int arr[], int si, int ei){
         //base case
@@ -40,3 +41,7 @@ public class quick_sort {
         printArr(arr);
     }    
 }
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
