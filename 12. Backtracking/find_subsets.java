@@ -1,3 +1,4 @@
+//find all the subsets of a string
 public class find_subsets {
     public static void findSubsets(String str, String ans, int i){
         //base case
@@ -19,3 +20,9 @@ public class find_subsets {
         findSubsets(str, "", 0);
     }
 }
+//Time Complexity : o(n*2^n)
+//Space Complexity: o(n)
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
