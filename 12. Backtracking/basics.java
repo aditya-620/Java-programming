@@ -22,3 +22,7 @@ public class basics {
         printArr(arr);
     }
 }
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
