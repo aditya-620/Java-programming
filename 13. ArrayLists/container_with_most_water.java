@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 public class container_with_most_water {
-    // brute force - T.C.: O(2^n)
+    // brute force - T.C.: O(n^2)
     // public static int storedWater(ArrayList<Integer> height){
     //     int maxWater = 0;
     //     for(int i=0; i<height.size(); i++){
