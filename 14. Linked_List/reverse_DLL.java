@@ -1,3 +1,4 @@
+//program to reverse a Doubly LinkedList
 import org.w3c.dom.Node;
 
 public class reverse_DLL {
@@ -70,3 +71,7 @@ public class reverse_DLL {
         dll.print();
     }
 }
+
+//If you like my code do give stars:-)
+//Keep coding!!
+//Thankyou;-)
