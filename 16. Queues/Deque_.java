@@ -12,6 +12,9 @@ public class Deque_ {
         System.out.println(deque);  
         deque.removeFirst();
         System.out.println(deque);
+
+        System.out.println("first element = "+deque.getFirst());
+        System.out.println("last element = "+deque.getLast());
     }
 }
 
