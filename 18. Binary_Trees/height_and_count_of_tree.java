@@ -1,6 +1,6 @@
-//program to find the height og tree
+//program to find the height and count of tree
 
-public class height_of_tree {
+public class height_and_count_of_tree {
     static class Node{
         int data;
         Node left;
@@ -21,6 +21,15 @@ public class height_of_tree {
         int rh = height(root.right);
         return Math.max(lh, rh) + 1;
     }
+
+    public static int count(Node root){
+        if(root == null){
+            return 0;
+        }
+        int leftCount = count(root.left);
+        int rightCount = count(root.right);
+        return leftCount + rightCount + 1;
+    }
     
     public static void main(String args[]){
         /*
@@ -38,7 +47,8 @@ public class height_of_tree {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
     
-        System.out.println(height(root));
+        System.out.println("height of tree: " +height(root));
+        System.out.println("count of tree: " +count(root));
     }
 }
 
