@@ -17,35 +17,51 @@ public class kth_level {
             this.right = null;
         }
     }
+
+    //approach-1 : iterative method
     public static void Klevel_1(Node root, int level, int k){
         if(root == null){
                 return;
             }
-            Queue<Node> q = new LinkedList<>();
-            q.add(root);
-            q.add(null);
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
 
-            while(!q.isEmpty()){
-                Node currNode = q.remove();
-                if(currNode == null){
-                    if(q.isEmpty()){
-                        break;
-                    } else {
-                        level++;
-                        q.add(null);
-                    }
+        while(!q.isEmpty()){
+            Node currNode = q.remove();
+            if(currNode == null){
+                if(q.isEmpty()){
+                    break;
                 } else {
-                    if(k == level){
-                        System.out.print(currNode.data +" ");
-                    }
-                    if(currNode.left != null){
-                        q.add(currNode.left);
-                    }
-                    if(currNode.right != null){
-                        q.add(currNode.right);
-                    }
+                    level++;
+                    q.add(null);
+                }
+            } else {
+                if(k == level){
+                    System.out.print(currNode.data +" ");
+                }
+                if(currNode.left != null){
+                    q.add(currNode.left);
+                }
+                if(currNode.right != null){
+                    q.add(currNode.right);
                 }
             }
+        }
+    }
+
+    //approach-2 : recursive method
+    public static void Klevel_2(Node root, int level, int k){
+        if(root == null){
+            return;
+        }
+        if(level == k){
+            System.out.print(root.data +" ");
+            return;
+        }
+
+        Klevel_2(root.left, level+1, k);
+        Klevel_2(root.right, level+1, k);
     }
     public static void main(String args[]){
         /*
@@ -63,7 +79,11 @@ public class kth_level {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-        Klevel_1(root,1,3);
+        int k = 2;
+        Klevel_1(root,1,k);
+        System.out.println();
+        k = 3;
+        Klevel_2(root,1,k);
     }
 }
 
