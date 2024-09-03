@@ -55,6 +55,7 @@ public class CustomStack {
     }
     public static void main(String[] args) throws StackException{
         CustomStack stack = new CustomStack(5);
+        // CustomStack stack = new DynamicStack(5);   //for the dynamic stack program
 
         stack.push(34);
         stack.push(45);
