@@ -34,6 +34,9 @@ public class lowest_common_ancestor {
         return false;
     }
 
+    //Approach - 1
+    //T.C. = O(n)
+    //S.C. = O(n)
     public static Node lca(Node root, int n1, int n2){
         ArrayList<Node> path1 = new ArrayList<>();
         ArrayList<Node> path2 = new ArrayList<>();
@@ -53,6 +56,32 @@ public class lowest_common_ancestor {
         Node lca = path1.get(i-1);
         return lca;
     }
+
+    //Approach - 2
+    //T.C. = O(n)
+    //S.C. = O(1)
+    public static Node lca2(Node root, int n1, int n2){
+        if(root == null || root.data == n1 || root.data == n2){
+            return root;
+        }
+
+        Node leftLca = lca2(root.left, n1, n2);
+        Node rightLca = lca2(root.right, n1, n2);
+
+        //leftLca = val && rightLca = null
+        if(rightLca == null){
+            return leftLca;
+        }
+
+        //rightLca = val && leftLca = null
+        if(leftLca == null){
+            return rightLca;
+        }
+
+        return root;
+    }
+
+
     public static void main(String args[]){
         /*
                     1
@@ -71,6 +100,10 @@ public class lowest_common_ancestor {
 
         int n1 = 4, n2 = 5;
         System.out.println(lca(root, n1, n2).data);
+
+        n1 = 4;
+        n2 = 7;
+        System.out.println(lca2(root, n1, n2).data);
     }
 }
 
