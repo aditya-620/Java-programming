@@ -18,7 +18,7 @@ public class queues2 {
         }
 
         //add
-        public static voif add(int data){
+        public static void add(int data){
             Node newNode= new Node(data);
 
             if(head == null){
