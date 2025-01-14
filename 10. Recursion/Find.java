@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Find {
     public static void main(String[] args) {
         int[] arr = {2, 3, 1, 4, 4, 5};
@@ -9,9 +9,9 @@ public class Find {
 //        System.out.println(list);
 
 //        ArrayList<Integer> list = new ArrayList<>();
-//        ArrayList<Integer> ans = findAllIndex(arr, 4, 0, list);
-//        System.out.println(ans);
-//        System.out.println(list);
+       ArrayList<Integer> ans = findAllIndex(arr, 4, 0, list);
+       System.out.println(ans);
+       System.out.println(list);
     }
 
     //M-1
