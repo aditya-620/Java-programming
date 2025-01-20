@@ -15,6 +15,9 @@ public class deleteInHeap {
                 int temp = arr.get(x);
                 arr.set(x, arr.get(par));
                 arr.set(par, temp);
+
+                x = par;
+                par = (x-1)/2;   
             }
         }
         public int peek(){
@@ -57,6 +60,10 @@ public class deleteInHeap {
             heapify(0);
             return data;
         }
+
+        public boolean isEmpty(){
+            return arr.size() == 0;
+        }
     }
 
 
@@ -70,9 +77,10 @@ public class deleteInHeap {
 
         //ele add, which does not satisfy the min heap property
         hp.add(6);
-        System.out.println(hp.peek());
-        System.out.println("min element removed:" + hp.remove());
-        System.out.println("new min ele:" +hp.peek());
+        while(!hp.isEmpty()){
+            System.out.println(hp.peek());
+            hp.remove();
+        }
     }
 }
 
