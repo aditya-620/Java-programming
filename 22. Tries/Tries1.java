@@ -2,11 +2,11 @@ public class Tries1 {
     static class Node {
         Node[] children = new Node[26];
         boolean eow = false; // end of word
-    }
 
-    Node() {
-        for(int i=0; i<26; i++){
-            children[i] = null;
+        Node() {
+            for(int i=0; i<26; i++){
+                children[i] = null;
+            }
         }
     }
 
@@ -27,10 +27,31 @@ public class Tries1 {
         curr.eow = true; // mark the end of word
     }
 
+    public static void search(String word){
+        Node curr = root;
+        for(int level=0; level<word.length(); level++){
+            int idx = word.charAt(level) - 'a';
+
+            if(curr.children[idx] == null){
+                System.out.println(word + " not found");
+                return;
+            }
+            curr = curr.children[idx];
+        }
+        if(curr.eow == true){
+            System.out.println(word + " found");
+        } else{
+            System.out.println(word + " not found");
+        }
+    }
+
     public static void main(String[] args) {
         String words[] = {"the", "a", "there", "their", "any", "thee"};
         for(int i=0; i<words.length; i++){
             insert(words[i]);
         }
+
+        search("the"); // Word found
+        search("these"); // Word not found
     }
 }
