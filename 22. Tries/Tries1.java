@@ -55,3 +55,7 @@ public class Tries1 {
         search("these"); // Word not found
     }
 }
+
+
+// Time Complexity: O(L) where L is the length of the word in insert and search methods
+// Space Complexity: O(L) where L is the length of the word
