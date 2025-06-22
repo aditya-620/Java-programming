@@ -44,9 +44,21 @@ public class BFS {
         graph[6].add(new Edge(6, 5, 1));
     }
 
-    public static void bfs(ArrayList<Edge> graph[]){
-        Queue<Integer> q = new LinkedList<>();
+    public static void bfs(ArrayList<Edge> graph[]) {
         boolean visited[] = new boolean[graph.length];
+
+        // Perform BFS for each component of the graph
+        // This is necessary in case the graph is disconnected
+        for(int i=0; i<graph.length; i++){
+            if(!visited[i]){
+                visited[i] = true; // Mark the starting vertex as visited
+                bfsUtil(graph, visited);
+            }
+        }
+    }
+
+    public static void bfsUtil(ArrayList<Edge> graph[], boolean visited[]) {
+        Queue<Integer> q = new LinkedList<>();
         q.add(0); // Start BFS from vertex 0
 
         while(!q.isEmpty()){
