@@ -44,7 +44,9 @@ public class DFS {
     public static void dfs(ArrayList<Edge> graph[]) {
         boolean visited[] = new boolean[graph.length];
         for(int i=0; i<graph.length; i++){
-            dfsUtil(graph, i, visited);
+            if(!visited[i]) {
+                dfsUtil(graph, i, visited);
+            }
         }
     }
 
