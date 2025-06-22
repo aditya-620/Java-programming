@@ -43,37 +43,38 @@ public class BFS {
 
         graph[6].add(new Edge(6, 5, 1));
     }
-
+    
     public static void bfs(ArrayList<Edge> graph[]) {
         boolean visited[] = new boolean[graph.length];
-
+    
         // Perform BFS for each component of the graph
         // This is necessary in case the graph is disconnected
         for(int i=0; i<graph.length; i++){
             if(!visited[i]){
-                visited[i] = true; // Mark the starting vertex as visited
-                bfsUtil(graph, visited);
+                bfsUtil(graph, visited, i); // pass `i` here
             }
         }
     }
 
-    public static void bfsUtil(ArrayList<Edge> graph[], boolean visited[]) {
+    public static void bfsUtil(ArrayList<Edge> graph[], boolean[] visited, int start) {
         Queue<Integer> q = new LinkedList<>();
-        q.add(0); // Start BFS from vertex 0
+        q.add(start);
+        visited[start] = true; // mark visited when adding to queue
 
-        while(!q.isEmpty()){
+        while(!q.isEmpty()) {
             int curr = q.remove();
+            System.out.print(curr + " ");
 
-            if(!visited[curr]) {
-                System.out.print(curr + " ");
-                visited[curr] = true;
-                for(int i=0; i<graph[curr].size(); i++){
-                    Edge e = graph[curr].get(i);
-                    q.add(e.dest); // Add the destination vertex to the queue
+            for(int i = 0; i < graph[curr].size(); i++) {
+                Edge e = graph[curr].get(i);
+                if(!visited[e.dest]) {
+                    q.add(e.dest);   // Add the destination vertex to the queue
+                    visited[e.dest] = true; // avoid adding same node multiple times
                 }
             }
         }
-    }
+    }   
+    
     public static void main(String[] args) {
     /* 
          1 ─── 3 
